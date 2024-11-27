@@ -337,49 +337,99 @@ th, td {
 /*TELA DE CARDAPIO*/
 
 
-
-.item {
-   
-   
-    width: 300px;
-    margin: 20px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.item img {
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+
+/* Estilos do cardápio */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.produto {
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.produto img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+.detalhes {
+    padding: 15px;
     
 }
 
-.item h2 {
-    font-size: 24px;
-    margin-top: 10px;
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
 }
 
-.item p {
-    font-size: 16px;
-    color: #666;
+p {
+    margin-bottom: 10px;
 }
 
-.item span {
+.preco {
+    font-size: 1.3rem;
     font-weight: bold;
-    color: #ff6600;
-    margin-left: 100px;
+    color: #e74c3c;
 }
 
 .btn-escolher {
-    
-    background-color: #4CAF50; /* Verde */
+    margin-left: 45px;
+    background-color: #27ae60;
     color: white;
-    padding: 10px 20px;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
-    margin-left: 50px;
-   
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-escolher:hover {
+    background-color: #2ecc71;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
 }
