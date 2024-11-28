@@ -1,157 +1,237 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio da Hamburgueria</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="JS/carrinho.js">
+  
 </head>
 <body>
-    <header id="nav">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            </ul>
+  <header id="nav">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+    </ul>
 
-            <ul>
-            <li><a href="cardapio.html">Cardapio</a></li>
-            </ul>
+    <ul>
+      <li><a href="cardapio.html">Cardápio</a></li>
+    </ul>
 
-            <ul>
-            <li><a href="login.html">Entrar</a></li>
-            </ul>
-            
-            <ul>
-             <li><a href="carrinho.html"> Carrinho</a></li>
-            </ul>
-        </ul>
-    </header>
-    <h1>Hamburguers de Carne</h1>
-    <section class="menu">
-        
-        <div class="produto">
-            <img src="imagens/hambuguer 2.png" alt="Hamburguer Clássico">
-            <div class="detalhes">
-                <h2>Hamburguer </h2>
-                <p>Carne suculenta, queijo, alface e tomate.</p>
-                <p class="preco">R$ 18,90</p>
-                <button class="btn-escolher">Escolher</button>
-            </div>
-        </div>
-        
-        <div class="produto">
-            <img src="imagens/hambuguer 2.png" alt="Cheeseburger">
-            <div class="detalhes">
-                <h2>Cheeseburger</h2>
-                <p>Carne com queijo cheddar e bacon crocante.</p>
-                <p class="preco">R$ 22,90</p>
-                <button class="btn-escolher">Escolher</button>
-            </div>
-        </div>
-        
-        <div class="produto">
-            <img src="imagens/hambuguer 2.png" alt="Veggie Burger">
-            <div class="detalhes">
-                <h2>Veggie Burger</h2>
-                <p>Hamburguer vegetariano com legumes frescos.</p>
-                <p class="preco">R$ 20,90</p>
-                <button class="btn-escolher">Escolher</button>
-            </div>
-        </div>
+    <ul>
+      <li><a href="login.html">Entrar</a></li>
+    </ul>
 
-        <div class="produto">
-            <img src="imagens/hambuguer 2.png" alt="Veggie Burger">
-            <div class="detalhes">
-                <h2>Burguer Cheddar</h2>
-                <p>Hamburguer Cheddar com molho especial</p>
-                <p class="preco">R$ 25,00</p>
-                <button class="btn-escolher">Escolher</button>
-            </div>
-        </div>
-        
-    </section>
-    <h1>Combos</h1>
-    <section class="menu">
-        
-        <div class="produto">
-            <img src="imagens/hambuguer 2.png" alt="Hamburguer Clássico">
-            <div class="detalhes">
-                <h2>Combo Duplo</h2>
-                <p>Carne suculenta, queijo, alface e tomate.</p>
-                <p class="preco">R$ 18,90</p>
-                <button class="btn-escolher">Escolher</button>
-            </div>
-        </div>
-        
-        <div class="produto">
-            <img src="imagens/hambuguer 2.png" alt="Cheeseburger">
-            <div class="detalhes">
-                <h2>Mega Combo</h2>
-                <p>Carne com queijo cheddar e bacon crocante.</p>
-                <p class="preco">R$ 22,90</p>
-                <button class="btn-escolher">Escolher</button>
-            </div>
-        </div>
-        
-        <div class="produto">
-            <img src="imagens/hambuguer 2.png" alt="Veggie Burger">
-            <div class="detalhes">
-                <h2>Combo Avassalador</h2>
-                <p>Hamburguer vegetariano com legumes frescos.</p>
-                <p class="preco">R$ 20,90</p>
-                <button class="btn-escolher">Escolher</button>
-            </div>
-        </div>
+    <ul>
+      <li><a href="carrinho.html">Carrinho</a></li>
+    </ul>
+  </header>
+  <h1>Cardápio</h1>
+  <h2>Hamburguers de Carne</h2>
+  <div class="menu-container">
+    
+    <div class="menu-item">
+      <img src="imagens/hambuguer 2.png" alt="Produto 1" class="product-image">
+      <h2 class="product-name">Big Burguer</h2>
+      <p>Carne suculenta, queijo, alface e tomate.</p>
+      <p class="product-price">R$ 25.00</p>
+      <button class="choose-button" 
+              data-name="Big Burguer" 
+              data-price="25.00" 
+              data-image="imagens/hambuguer 2.png">Escolher</button>
+    </div>
+     
+    <div class="menu-item">
+        <img src="imagens/Cheeseburger.jpg" alt="Produto 1" class="product-image">
+        <h2 class="product-name">Cheeseburger</h2>
+        <p>Carne com queijo cheddar e bacon crocante.</p>
+        <p class="product-price">R$ 22.90</p>
+        <button class="choose-button" 
+                data-name="Cheeseburger" 
+                data-price="22.90" 
+                data-image="imagens/Cheeseburger.jpg">Escolher</button>
+      </div>
+       
+    <div class="menu-item">
+        <img src="imagens/Healt Burguer.jpg" alt="Produto 1" class="product-image">
+        <h2 class="product-name">Healt Burguer</h2>
+        <p>Hamburguer com molho especial e alface</p>
+        <p class="product-price">R$ 20.90</p>
+        <button class="choose-button" 
+                data-name="Healt Burguer" 
+                data-price="20.90" 
+                data-image="imagens/Healt Burguer.jpg">Escolher</button>
+      </div>
+       
+    <div class="menu-item">
+        <img src="imagens/burguer cheddar.jpg" alt="Produto 1" class="product-image">
+        <h2 class="product-name">Burguer Cheddar</h2>
+        <p>Hamburguer Cheddar com molho especial</p>
+        <p class="product-price">R$ 30.00</p>
+        <button class="choose-button" 
+                data-name="Burguer Cheddar" 
+                data-price="30.00" 
+                data-image="imagens/burguer cheddar.jpg">Escolher</button>
+      </div>
+    
+    
+  </div>
 
-        <div class="produto">
-            <img src="imagens/hambuguer 2.png" alt="Veggie Burger">
-            <div class="detalhes">
-                <h2>Combo Cheddar</h2>
-                <p>Hamburguer Cheddar com molho especial</p>
-                <p class="preco">R$ 25,00</p>
-                <button class="btn-escolher">Escolher</button>
-            </div>
-        </div>
-        
-    </section>
-    <h1>Bebidas</h1>
-    <section class="menu">
-        
-        <div class="produto">
-            <img src="imagens/coca 1lt.webp" alt="Hamburguer Clássico">
-            <div class="detalhes">
-                <h2>Coca de 1L</h2>
-                <p class="preco">R$ 5,00</p>
-                <button class="btn-escolher">Escolher</button>
-            </div>
-        </div>
-        
-        <div class="produto">
-            <img src="imagens/coca 2lt.webp" alt="Cheeseburger">
-            <div class="detalhes">
-                <h2>Coca de 2L</h2>
-                <p class="preco">R$ 9,00</p>
-                <button class="btn-escolher">Escolher</button>
-            </div>
-        </div>
-        
-        <div class="produto">
-            <img src="imagens/suco laranja.webp" alt="Veggie Burger">
-            <div class="detalhes">
-                <h2>Suco de Laranja </h2>
-                <p class="preco">R$ 6,00</p>
-                <button class="btn-escolher">Escolher</button>
-            </div>
-        </div>
 
-        <div class="produto">
-            <img src="imagens/agua.webp" alt="Veggie Burger">
-            <div class="detalhes">
-                <h2>Agua</h2>
-                <p class="preco">R$ 4,00</p>
-                <button class="btn-escolher">Escolher</button>
-            </div>
+
+  
+  <h2>Especiais</h2>
+  <div class="menu-container">
+    <div class="menu-item">
+      <img src="imagens/combo1.jpg" alt="Produto 1" class="product-image">
+      <h2 class="product-name">Mega Combo</h2>
+      <p>Hambuguer com uma Coca de 2L e sorverte</p>
+      <p class="product-price">R$ 18.90</p>
+      <button class="choose-button" 
+              data-name="Mega Combo" 
+              data-price="18.90" 
+              data-image="imagens/combo1.jpg">Escolher</button>
+    </div>
+
+
+    
+        <div class="menu-item">
+          <img src="imagens/combo2.jpg" alt="Produto 1" class="product-image">
+          <h2 class="product-name">Frang Combo</h2>
+          <p>Hambuguer de Frango cheats com uma Coca de 1L.</p>
+          <p class="product-price">R$ 22.90</p>
+          <button class="choose-button" 
+                  data-name="Frang Combo" 
+                  data-price="18.90" 
+                  data-image="imagens/combo2.jpg">Escolher</button>
         </div>
-        
-    </section>
+      
+
+      
+        <div class="menu-item">
+          <img src="imagens/combo3.jpg" alt="Produto 1" class="product-image">
+          <h2 class="product-name">Burguer vegetariano</h2>
+          <p>Hamburguer Vegetariano com legumes frescos e uma Fanta de 500ml.</p>
+          <p class="product-price">R$ 35.90</p>
+          <button class="choose-button" 
+                  data-name="Combo Avassalador" 
+                  data-price="35.90" 
+                  data-image="imagens/combo3.jpg">Escolher</button>
+        </div>
+      
+
+      
+        <div class="menu-item">
+          <img src="imagens/combo4.jpg" alt="Produto 1" class="product-image">
+          <h2 class="product-name">Cheddar Triplo</h2>
+          <p>Hamburguer Cheddar com uma Peps e um Milkshake</p>
+          <p class="product-price">R$ 40.00</p>
+          <button class="choose-button" 
+                  data-name="Combo Cheddar" 
+                  data-price="40.00" 
+                  data-image="imagens/hambuguer 2.png">Escolher</button>
+        </div>
+      
+  </div>
+
+
+
+
+  <h2>Bebidas</h2>
+  <div class="menu-container">
+    <div class="menu-item">
+      <img src="imagens/coca 1lt.webp" alt="Produto 1" class="product-image">
+      <h2 class="product-name">Coca de 1L</h2>
+      <p class="product-price">R$ 5.00</p>
+      <button class="choose-button" 
+              data-name="Coca de 1L" 
+              data-price="5.00" 
+              data-image="imagens/coca 1lt.webp">Escolher</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="imagens/coca 2lt.webp" alt="Produto 1" class="product-image">
+        <h2 class="product-name">Coca de 2L</h2>
+        <p class="product-price">R$ 9.00</p>
+        <button class="choose-button" 
+                data-name="Coca de 2L" 
+                data-price="9.00" 
+                data-image="imagens/coca 2lt.webp">Escolher</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="imagens/suco laranja.webp" alt="Produto 1" class="product-image">
+        <h2 class="product-name">Suco de Laranja</h2>
+        <p class="product-price">R$ 6.00</p>
+        <button class="choose-button" 
+                data-name="Suco de Laranja" 
+                data-price="6.00" 
+                data-image="imagens/suco laranja.webp">Escolher</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="imagens/agua.webp" alt="Produto 1" class="product-image">
+        <h2 class="product-name">Agua</h2>
+        <p class="product-price">R$ 6.00</p>
+        <button class="choose-button" 
+                data-name="Agua" 
+                data-price="4.00" 
+                data-image="imagens/agua.webp">Escolher</button>
+      </div>
+
+</div>
+
+
+
+<h2>Sobremesas</h2>
+<div class="menu-container">
+    <div class="menu-item">
+      <img src="imagens/milkshake.jpg" alt="Produto 1" class="product-image">
+      <h2 class="product-name">Milkshake de Chocolate</h2>
+      <p class="product-price">R$ 12.00</p>
+      <button class="choose-button" 
+              data-name="Milkshake de Chocolate" 
+              data-price="12.00" 
+              data-image="imagens/milkshake.jpg">Escolher</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="imagens/milksaheke coco.jpg" alt="Produto 1" class="product-image">
+        <h2 class="product-name">Milkshake de Coco com Chocolate</h2>
+        <p class="product-price">R$ 10.00</p>
+        <button class="choose-button" 
+                data-name="Milkshake de Coco com Chocolate" 
+                data-price="10.00" 
+                data-image="imagens/milksaheke coco.jpg">Escolher</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="imagens/cascao.jpg" alt="Produto 1" class="product-image">
+        <h2 class="product-name">Sorvete de Cascão de Baunilha</h2>
+        <p class="product-price">R$ 6.50</p>
+        <button class="choose-button" 
+                data-name="Sorvete de Cascão de Baunilha" 
+                data-price="6.50" 
+                data-image="imagens/cascao.jpg">Escolher</button>
+      </div>
+
+      
+      <div class="menu-item">
+        <img src="imagens/morango.jpg" alt="Produto 1" class="product-image">
+        <h2 class="product-name">Sundae de Morango</h2>
+        <p class="product-price">R$ 8.50</p>
+        <button class="choose-button" 
+                data-name="Sundae de Morango" 
+                data-price="8.50" 
+                data-image="imagens/morango.jpg">Escolher</button>
+      </div>
+</div>
+
+    
+  
+
+  <script src="JS/carrinho.js"></script>
+
+  
 </body>
 </html>
