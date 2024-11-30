@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cardápio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="JS/carrinho.js">
+  <link rel="stylesheet" href="JS/cardapio.js">
+  
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+  <link rel="stylesheet" href="../config/database.js">
+  <link rel="stylesheet" href="../controllers/pedidocontroller.js">
+  
   
 </head>
 <body>
@@ -31,8 +37,8 @@
   <div class="menu-container">
     
     <div class="menu-item">
-      <img src="imagens/hambuguer 2.png" alt="Produto 1" class="product-image">
-      <h2 class="product-name">Big Burguer</h2>
+      <img src="imagens/hambuguer 2.png" dalt="Produto 1" class="product-image"  >
+      <h2 class="product-name"> Big Burguer</h2>
       <p>Carne suculenta, queijo, alface e tomate.</p>
       <p class="product-price">R$ 25.00</p>
       <button class="choose-button" 
@@ -230,7 +236,7 @@
     
   
 
-  <script src="JS/carrinho.js"></script>
+  <script src="JS/cardapio.js"></script>
 
   
 </body>

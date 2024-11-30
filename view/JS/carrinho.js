@@ -1,55 +1,4 @@
 
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCVDHivsfn4mTXzUrFl6aWHCnb2KpYMcTY",
-    authDomain: "restaurante-8d250.firebaseapp.com",
-    projectId: "restaurante-8d250",
-    storageBucket: "restaurante-8d250.firebasestorage.app",
-    messagingSenderId: "548562199471",
-    appId: "1:548562199471:web:6cd6caafa7d445a9a4855a",
-    measurementId: "G-E828YFETHG"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-
-
-
-const chooseButtons = document.querySelectorAll('.choose-button');
-
-
-chooseButtons.forEach(button => {
-  button.addEventListener('click', () => {
-  
-    const product = {
-      name: button.dataset.name,
-      price: button.dataset.price,
-      image: button.dataset.image,
-    };
-
-    
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
- 
-    cart.push(product);
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    alert(`${product.name} foi adicionado ao carrinho!`);
-  });
-});
-
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -106,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', ()  => {
     const finalizeButton = document.querySelector('.checkout-button');
     const modal = document.getElementById('confirmation-modal');
     const closeModalButton = document.getElementById('close-modal');
