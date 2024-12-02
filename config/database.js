@@ -1,7 +1,6 @@
 
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
-  
+
+
   const firebaseConfig = {
   apiKey: "AIzaSyCVDHivsfn4mTXzUrFl6aWHCnb2KpYMcTY",
   authDomain: "restaurante-8d250.firebaseapp.com",
@@ -13,9 +12,9 @@
   };
   
   firebase.initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
   
   
-  let bd = firebase.firestore();
+  
+  
   
   
