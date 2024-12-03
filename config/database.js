@@ -1,6 +1,7 @@
 
 
 
+
   const firebaseConfig = {
   apiKey: "AIzaSyCVDHivsfn4mTXzUrFl6aWHCnb2KpYMcTY",
   authDomain: "restaurante-8d250.firebaseapp.com",
@@ -14,6 +15,8 @@
   firebase.initializeApp(firebaseConfig);
   
   
+  
+ 
   
   
   
