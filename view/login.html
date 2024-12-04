@@ -6,39 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="JS/app.js">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-        <script> src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"</script>
-
-        
-        <script src="../models/login.js"></script>
-        <script src="../config/database.js"></script>
-        
-
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+    <script src="../models/login.js"></script>
+    <script src="../config/database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
     <header id="nav">
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            </ul>
-
-            <ul>
-            <li><a href="cardapio.html">Cardapio</a></li>
-            </ul>
-
-            <ul>
-            <li><a href="login.html">Entrar</a></li>
-            </ul>
-            
-            <ul>
-             <li><a href="carrinho.html"> Carrinho</a></li>
-            </ul>
         </ul>
-
     </header>
 
     <div class="container">
@@ -47,7 +29,7 @@
                 <h2 class="title title-primary">Bem-vindo de volta!</h2>
                 <p class="description description-primary">Para continuar conectado conosco,</p>
                 <p class="description description-primary">faça login com suas informações pessoais</p>
-                <button id="signin" class="btn btn-primary" onclick="login()">Entrar</button>
+                <button id="signin" class="btn btn-primary">Entrar</button>
             </div>    
             <div class="second-column">
                 <h2 class="title title-second">Criar conta</h2>
@@ -72,23 +54,22 @@
                 </div>
                 <p class="description description-second">Ou use seu e-mail para registrar-se:</p>
                 <form class="form">
-                    <label class="label-input" for="">
+                    <label class="label-input" for="name">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Name">
+                        <input type="text" id="rname" placeholder="Name">
                     </label>
                     
-                    <label class="label-input" for="">
+                    <label class="label-input" for="email">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" id="remail" placeholder="Email">
                     </label>
                     
-                    <label class="label-input" for="">
+                    <label class="label-input" for="password">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" id="rpassword" placeholder="Password">
                     </label>
                     
-                    
-                    <button class="btn btn-second">Registrar</button>        
+                    <button class="btn btn-second" type="button" onclick="register()">Registrar</button>    
                 </form>
             </div>
         </div>
@@ -97,15 +78,15 @@
                 <h2 class="title title-primary">Olá, amigo!</h2>
                 <p class="description description-primary">Insira seus dados pessoais</p>
                 <p class="description description-primary">e comece sua jornada conosco.</p>
-                <button id="signup" class="btn btn-primary" >Registrar</button>
+                <button id="signup" class="btn btn-primary">Registrar</button>
             </div>
             <div class="second-column">
-                <h2 class="title title-second">Entrar como Desenvolvedor</h2>
+                <h2 class="title title-second">Entrar</h2>
                 <div class="social-media">
                     <ul class="list-social-media">
                         <a class="link-social-media" href="#">
                             <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-facebook-f"></i>        
                             </li>
                         </a>
                         <a class="link-social-media" href="#">
@@ -122,44 +103,50 @@
                 </div>
                 <p class="description description-second">Ou use sua conta de e-mail:</p>
                 <form class="form">
-                
-                    <label class="label-input" for="">
+                    <label class="label-input" for="email">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" id="email" placeholder="Email">
                     </label>
                 
-                    <label class="label-input" for="">
-                        <input type="password" placeholder="Password">
+                    <label class="label-input" for="password">
+                        <input type="password" id="password" placeholder="Password">
                     </label>
                 
                     <a class="password" href="#">Esqueceu sua senha?</a>
-                    <button class="btn btn-second">Entrar</button>
+                    <button class="btn btn-second" type="button" onclick="logar()">Entrar</button>
                 </form>
             </div>
         </div>
     </div>
-    <script src="JS/app.js"></script>
-
-
 
     <style>
-        #nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(0, 0, 0);
-    height: 5rem;
-}
+        #nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+            height: 5rem;
+        }
 
-#nav a{
-    text-decoration: none;
-    color: rgb(255, 255, 254);
-    font-size: 20px;
-}
-#nav a:hover{
-    color: rgb(211, 148, 12);
-}
+        #nav a {
+            text-decoration: none;
+            color: rgb(255, 255, 254);
+            font-size: 20px;
+        }
+
+        #nav a:hover {
+            color: rgb(211, 148, 12);
+        }
     </style>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    window.location.href = "index.html";
+                }
+            });
+        });
+    </script>
+    <script src="JS/app.js"></script>
 </body>
 </html>

@@ -55,27 +55,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  document.addEventListener('DOMContentLoaded', ()  => {
+  document.addEventListener('DOMContentLoaded', () => {
     const finalizeButton = document.querySelector('.checkout-button');
     const modal = document.getElementById('confirmation-modal');
     const closeModalButton = document.getElementById('close-modal');
   
-    
     finalizeButton.addEventListener('click', () => {
+      const cart = JSON.parse(localStorage.getItem('cart')) || []; 
+  
+      if (cart.length === 0) {
+        alert('Seu carrinho está vazio. Adicione itens antes de finalizar o pedido.');
+        return; 
+      }
+  
+      
       modal.classList.add('visible');
     });
   
-    
     closeModalButton.addEventListener('click', () => {
       modal.classList.remove('visible');
     });
   
-    
     modal.addEventListener('click', (event) => {
       if (event.target === modal) {
         modal.classList.remove('visible');
       }
     });
   });
+  
   
   
