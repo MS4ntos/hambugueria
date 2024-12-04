@@ -513,7 +513,9 @@ input:-webkit-autofill
     }
 }
 
-
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+    background-color: rgb(211 148 12)  !important;
+}
 
 
 
