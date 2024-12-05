@@ -67,6 +67,6 @@ Configurar as regras de segurança: Definir as regras de acesso aos dados para g
 Desafios Enfrentados:
 
 
-Gerenciamento do estado: Manter o estado do carrinho de compras atualizado em todas as páginas.
-Otimização de desempenho: Carregar as páginas rapidamente, mesmo com muitos produtos no cardápio.
-Tratamento de erros: Implementar mecanismos para lidar com erros durante a comunicação com o Firebase e outras operações.
+-Gerenciamento do estado: Manter o estado do carrinho de compras atualizado em todas as páginas.
+-Otimização de desempenho: Carregar as páginas rapidamente, mesmo com muitos produtos no cardápio.
+-Tratamento de erros: Implementar mecanismos para lidar com erros durante a comunicação com o Firebase e outras operações.
