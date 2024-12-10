@@ -59,6 +59,7 @@ img{
     
 }
 .imagem-card{
+ 
     width: 50rem;
     height: 20rcap;
     object-fit: cover;
@@ -142,28 +143,25 @@ img{
 
 
 
-
-
-.container{
-    display: flex;
-    justify-content: space-around;
-    
-    
+#cardapio {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #f3b42d;
+  height: 8rem;
+  margin-bottom: 50px;
+  margin-top: 50px;
+ 
 }
 
 .cardapio{
-    display: flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
+  height: 25rem;
+  margin-top: 30px;
+  
 }
 
-.historia{
-    display: flex;
-    align-items: center;
-   justify-content: center;
-   flex-direction: column;
-}
+
 
 button{
     width: 100px;
@@ -195,23 +193,19 @@ button{
 }
 
 .section3{
-    background-image: url(imagens/capa2.png/);
-    width: 100%;
+    height: 10vh;
+    background: black;
     
-    object-fit: cover;
+  
 }
 
-.redes{
-    display: flex;
-    margin-top: 200px;
-    margin-right: 60px;
-    
-}
+
 .footer{
-    color: aliceblue;
+    color: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
+  flex-direction: column;
+  align-items: center;
+   
     
 }
 
@@ -561,6 +555,7 @@ h1 {
     width: 280px;
     text-align: center;
     transition: transform 0.3s ease;
+    margin-bottom: 75px;
 }
 
 .menu-item {
@@ -581,8 +576,9 @@ h1 {
 h2 {
     text-align: center;
     font-size: 2.0rem;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     margin-top: 50px;
+   
 }
 
 p {
@@ -605,6 +601,7 @@ p {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s;
+    margin-bottom: 10px;
 }
 
 .choose-button:hover {
